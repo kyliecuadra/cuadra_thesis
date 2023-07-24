@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Access Denied</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<style>
+	body{
+		background-color: black;
+		color: white;
+	}
+
+	h1 {
+		color: red;
+	}
+
+	h6{
+		color: red;
+		text-decoration: underline;
+	}
+
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+		to { 
+			transform: rotate(360deg);
+		}
+	}
+
+
+	@-webkit-keyframes rotate {
+		from {
+			-webkit-transform: rotate(0deg);
+		}
+		to { 
+			-webkit-transform: rotate(360deg);
+		}
+	}
+
+	.load {
+		width: 50px;
+		height: 50px;
+		margin: 10px auto 0;
+		border:solid 5px red;
+		border-radius: 50%;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		-webkit-transition: all 0.5s ease-in;
+		-webkit-animation-name:             rotate; 
+		-webkit-animation-duration:         1.0s; 
+		-webkit-animation-iteration-count:  infinite;
+		-webkit-animation-timing-function: linear;
+
+		transition: all 0.5s ease-in;
+		animation-name:             rotate; 
+		animation-duration:         1.0s; 
+		animation-iteration-count:  infinite;
+		animation-timing-function: linear; 
+	}
+</style>
+
+<body>
+	<div class="w3-display-middle">
+		<h1 class="w3-jumbo w3-animate-top w3-center"><code>Access Denied</code></h1>
+		<hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+		<h3 class="w3-center w3-animate-right">You are unauthorized in this page.</h3>
+		<h5 class="w3-center w3-animate-right">Redirecting to proper page.</h5>
+		<div class="load"></div>
+		<h6 class="w3-center w3-animate-zoom">Error Code:403 Forbidden</h6>
+		
+	</div>
+
+	<script>
+		setTimeout(function(){ 
+			history.back()
+		}, 2000);
+	</script>
+
+</body>
+</html>

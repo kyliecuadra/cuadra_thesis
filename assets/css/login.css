@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	background: url("../img/bg.jpg");
+	min-height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.navbar{
+	background: #023047;
+}
+
+#title_logo{
+	max-width: 12vw;
+	width: auto;
+}
+#school{
+	font-weight: bold;
+	padding: 0;
+}
+#loc{
+	letter-spacing: 1vw;
+	padding: 0;
+}
+#logo{
+	max-width: 12vw;
+	width: auto;
+	padding-top: 15px;
+}
+.card{
+	width: 50%;
+	display: flex;
+	border-radius: 20px;
+	border: none;
+}
+
+.form div .btn-color{
+	background: #023047;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 2px;
+	box-shadow: none;
+}
+
+.form div .btn-color:hover,
+.form div .btn-color:active{
+	background: #0160ad;
+	color: #fff;
+}
