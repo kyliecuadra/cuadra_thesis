@@ -805,7 +805,7 @@ else{
 					}
 
 					function updateAMFNew(){
-						var newAmount = $('#newAmount').val();
+						var newAmount = $('#newAmountAMFNEW').val();
 						$.ajax({
 							url: "updateAMFNew.php",
 							type: "POST",
@@ -853,7 +853,7 @@ else{
 					}
 
 					function updateAMFOld(){
-						var newAmount = $('#newAmount').val();
+						var newAmount = $('#newAmountAMFOLD').val();
 						$.ajax({
 							url: "updateAMFOld.php",
 							type: "POST",
@@ -900,7 +900,7 @@ else{
 					}
 
 					function updateMCF(){
-						var newAmount = $('#newAmount').val();
+						var newAmount = $('#newAmountMCF').val();
 						$.ajax({
 							url: "updateMCF.php",
 							type: "POST",

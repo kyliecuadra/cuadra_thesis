@@ -357,9 +357,9 @@ if($old_password == $_SESSION['password']){
 					if(data.includes("1")){
 						console.log($('#month').val());
 						toastr.success("Contrbution has been added!");
-						// setTimeout(function() {
-						// 	history.back();
-						// }, 1000);
+						setTimeout(function() {
+							history.back();
+						}, 1000);
 						$("#contribution_check").modal('hide');
 					}
 					if(data.includes("Empty")){
