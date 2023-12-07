@@ -10,12 +10,12 @@ if(isset($_POST['empNo']) && isset($_POST['fname']) && isset($_POST['mname']) &&
 	$password = mb_strtoupper($password);
 
 	$check = mysqli_query($con, "SELECT * FROM users WHERE empNo = '$empNo'");
-	$checkAdmins = mysqli_query($con, "SELECT * FROM users WHERE userLvl = '$userLvl'");
-	$checkCollector = mysqli_query($con, "SELECT * FROM users WHERE userLvl = '$userLvl' AND staffLvl = '$staffLvl'");
+	$checkAdmins = mysqli_query($con, "SELECT * FROM users WHERE userLvl = '$userLvl' AND status = 1");
+	$checkCollector = mysqli_query($con, "SELECT * FROM users WHERE userLvl = '$userLvl' AND staffLvl = '$staffLvl' AND status = 1");
 		if (mysqli_num_rows($check) > 0){
 			echo '0';
 		}
-		elseif (($userLvl == 'Admin' OR $userLvl == 'System Admin') AND mysqli_num_rows($checkAdmins) > 0) {
+		elseif (($userLvl == 'Admin') AND mysqli_num_rows($checkAdmins) > 1) {
 			echo '1';
 		}
 		elseif ($userLvl == 'Collector' AND mysqli_num_rows($checkCollector) > 0) {

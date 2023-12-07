@@ -157,7 +157,7 @@ if($old_password == $_SESSION['password']){
 									</div>
 									<div class="col-md-3">
 										<label for="mname">Middle Name<span id="required">*</span></label>
-										<input type="text" class="form-control" id="mname" placeholder="Middle Name" required>
+										<input type="text" class="form-control" maxlength="1" id="mname" placeholder="Middle Name" required>
 									</div>
 									<div class="col-md-3">
 										<label for="lname">Last Name<span id="required">*</span></label>
@@ -542,6 +542,7 @@ if($old_password == $_SESSION['password']){
 							type: "POST",
 							data: {userid:hidden_userid},
 							success:function(data,status){
+								console.log(hidden_userid);
 								$('#statusModal').modal("hide");
 								displayRecords();
 								toastr.success("User Status Updated!");

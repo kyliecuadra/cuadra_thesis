@@ -965,6 +965,10 @@ else{
 										toastr.success("Expenses has been cut to the total contribution!");
 										$("#cutContributionModal").modal("hide");
 									}
+									else if(data == 2) {
+										console.log(data);
+										toastr.error("Grand collection is short for cutting expenses!");
+									}
 									else{
 										console.log(data);
 										toastr.error("Cannot cut the expenses!");
